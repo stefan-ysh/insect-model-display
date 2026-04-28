@@ -29,6 +29,16 @@
         <section class="viewer-card" aria-label="3D 模型展示区域">
           <canvas id="sceneCanvas" aria-label="3D 昆虫模型展示画布"></canvas>
           <div class="hotspot-layer" id="hotspotLayer" aria-hidden="true"></div>
+          <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+            <div class="loading-panel" role="status" aria-live="polite">
+              <span id="loadingTitle">正在加载模型</span>
+              <strong id="loadingPercent">0%</strong>
+              <div class="loading-track" aria-hidden="true">
+                <i id="loadingBar"></i>
+              </div>
+              <small id="loadingDetail">准备读取模型文件</small>
+            </div>
+          </div>
           <div class="viewer-help">
             <span>左键旋转 / 滚轮缩放 / 右键平移</span>
           </div>
@@ -63,7 +73,7 @@
 
             <label class="field">
               <span>缩放 <b id="scaleValue">1.00x</b></span>
-              <input id="scaleRange" type="range" min="0.3" max="3" value="1" step="0.01" />
+              <input id="scaleRange" type="range" min="0.65" max="3" value="1" step="0.01" />
             </label>
 
             <label class="field">

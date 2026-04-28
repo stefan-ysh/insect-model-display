@@ -5,6 +5,11 @@ const modelList = document.querySelector('#modelList');
 const modelSelect = document.querySelector('#modelSelect');
 const viewerCard = document.querySelector('.viewer-card');
 const hotspotLayer = document.querySelector('#hotspotLayer');
+const loadingOverlay = document.querySelector('#loadingOverlay');
+const loadingTitle = document.querySelector('#loadingTitle');
+const loadingPercent = document.querySelector('#loadingPercent');
+const loadingBar = document.querySelector('#loadingBar');
+const loadingDetail = document.querySelector('#loadingDetail');
 const colorPicker = document.querySelector('#colorPicker');
 const bgPicker = document.querySelector('#bgPicker');
 const materialSelect = document.querySelector('#materialSelect');
@@ -35,6 +40,10 @@ const MATERIAL_PRESETS = {
   metal: { roughness: 0.28, metalness: 0.68, opacity: 1, emissive: 0.03 },
   translucent: { roughness: 0.42, metalness: 0.02, opacity: 0.42, emissive: 0.1 }
 };
+
+const MIN_SCALE = 0.65;
+const TOUR_INTERVAL_MS = 3600;
+const TOUR_VIEWS = ['iso', 'front', 'side', 'top'];
 
 const scene = new THREE.Scene();
 let stageColor = new THREE.Color(bgPicker.value);
@@ -81,6 +90,7 @@ let currentFrame = null;
 let currentView = 'iso';
 let currentDimensions = null;
 let tourTimer = null;
+let tourStep = 0;
 let isLoading = false;
 scene.add(specimen);
 
@@ -117,6 +127,7 @@ function loadCatalogModel(model) {
   if (!model || isLoading) return;
   isLoading = true;
   setHint(`正在加载 ${model.name}...`);
+  setLoadingState(true, model.name, 0, `正在读取 ${formatBytes(model.size) || '模型文件'}`);
   setActiveModel(model.file);
   activeHotspots = window.INSECT_HOTSPOTS?.[model.file] || [];
 
@@ -125,16 +136,23 @@ function loadCatalogModel(model) {
     (object) => {
       replaceSpecimen(normalizeSpecimen(object, model.name), model.name, '模型已加载，已自动居中显示');
       isLoading = false;
+      setLoadingState(false);
+      if (tourTimer) updateTourHint();
     },
     (event) => {
-      if (!event.lengthComputable) return;
+      if (!event.lengthComputable) {
+        setLoadingState(true, model.name, null, `已接收 ${formatBytes(event.loaded)}，继续加载中`);
+        return;
+      }
       const percent = Math.round((event.loaded / event.total) * 100);
       setHint(`正在加载 ${model.name}... ${percent}%`);
+      setLoadingState(true, model.name, percent, `${formatBytes(event.loaded)} / ${formatBytes(event.total)}`);
     },
     (error) => {
       console.error(error);
       setHint('当前浏览器阻止读取 data 模型。请部署到静态站点后访问，或使用本地静态服务预览。');
       isLoading = false;
+      setLoadingState(false);
     }
   );
 }
@@ -228,7 +246,8 @@ function applyMaterialState() {
 }
 
 function updateScale() {
-  const scale = Number(scaleRange.value);
+  const scale = Math.max(Number(scaleRange.value), MIN_SCALE);
+  if (Number(scaleRange.value) < MIN_SCALE) scaleRange.value = String(MIN_SCALE);
   specimen.scale.setScalar(baseScale * scale);
   scaleValue.textContent = `${scale.toFixed(2)}x`;
 }
@@ -331,14 +350,22 @@ function toggleTour() {
   }
   const models = window.INSECT_MODELS || [];
   if (!models.length) return;
-  const views = ['iso', 'front', 'side', 'top'];
-  let step = Math.max(models.findIndex((model) => model.file === activeModelFile), 0);
+  controls.autoRotate = true;
+  setToggle(spinBtn, true, '自动旋转');
+  tourStep = 0;
+  frameCamera(TOUR_VIEWS[0]);
+  updateTourHint();
   tourTimer = window.setInterval(() => {
     if (isLoading) return;
-    step = (step + 1) % models.length;
-    frameCamera(views[step % views.length]);
-    loadCatalogModel(models[step]);
-  }, 8000);
+    tourStep += 1;
+    frameCamera(TOUR_VIEWS[tourStep % TOUR_VIEWS.length]);
+    if (models.length > 1 && tourStep % TOUR_VIEWS.length === 0) {
+      const activeIndex = Math.max(models.findIndex((model) => model.file === activeModelFile), 0);
+      loadCatalogModel(models[(activeIndex + 1) % models.length]);
+      return;
+    }
+    updateTourHint();
+  }, TOUR_INTERVAL_MS);
   setToggle(tourBtn, true, '巡展');
 }
 
@@ -347,6 +374,17 @@ function stopTour() {
   window.clearInterval(tourTimer);
   tourTimer = null;
   setToggle(tourBtn, false, '巡展');
+  setHint('巡展已停止，可手动切换模型和视角');
+}
+
+function updateTourHint() {
+  const viewNames = {
+    front: '正面',
+    side: '侧面',
+    top: '俯视',
+    iso: '等轴'
+  };
+  setHint(`巡展中：自动切换视角（${viewNames[currentView] || '等轴'}）和模型`);
 }
 
 function formatBytes(bytes) {
@@ -362,6 +400,19 @@ function formatUnit(value) {
 
 function setHint(text) {
   modelHint.textContent = text;
+}
+
+function setLoadingState(visible, name = '', percent = 0, detail = '') {
+  loadingOverlay.classList.toggle('is-visible', visible);
+  loadingOverlay.setAttribute('aria-hidden', String(!visible));
+  loadingTitle.textContent = visible ? `正在加载 ${name}` : '正在加载模型';
+  loadingDetail.textContent = detail || '准备读取模型文件';
+
+  const hasPercent = Number.isFinite(percent);
+  const clampedPercent = hasPercent ? THREE.MathUtils.clamp(percent, 0, 100) : 36;
+  loadingOverlay.classList.toggle('is-indeterminate', !hasPercent);
+  loadingPercent.textContent = hasPercent ? `${Math.round(clampedPercent)}%` : '加载中';
+  loadingBar.style.width = `${clampedPercent}%`;
 }
 
 function disposeMaterial(material) {
