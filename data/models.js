@@ -1,8 +1,8 @@
 window.INSECT_MODELS = [
   {
     "name": "昆虫模型 1",
-    "file": "./data/1.obj",
-    "mtl": "./data/1.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/1.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/1.mtl",
     "size": 11179402,
     "bounds": {
       "min": [
@@ -25,8 +25,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 2",
-    "file": "./data/2.obj",
-    "mtl": "./data/2.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/2.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/2.mtl",
     "size": 17242578,
     "bounds": {
       "min": [
@@ -49,8 +49,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 3",
-    "file": "./data/3.obj",
-    "mtl": "./data/3.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/3.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/3.mtl",
     "size": 16206220,
     "bounds": {
       "min": [
@@ -73,8 +73,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 4",
-    "file": "./data/4.obj",
-    "mtl": "./data/4.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/4.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/4.mtl",
     "size": 21399589,
     "bounds": {
       "min": [
@@ -97,8 +97,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 5",
-    "file": "./data/5.obj",
-    "mtl": "./data/5.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/5.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/5.mtl",
     "size": 14419674,
     "bounds": {
       "min": [
@@ -121,8 +121,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 6",
-    "file": "./data/6.obj",
-    "mtl": "./data/6.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/6.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/6.mtl",
     "size": 20878894,
     "bounds": {
       "min": [
@@ -145,8 +145,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 7",
-    "file": "./data/7.obj",
-    "mtl": "./data/7.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/7.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/7.mtl",
     "size": 16982212,
     "bounds": {
       "min": [
@@ -169,8 +169,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 8",
-    "file": "./data/8.obj",
-    "mtl": "./data/8.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/8.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/8.mtl",
     "size": 52976256,
     "bounds": {
       "min": [
@@ -193,8 +193,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 9",
-    "file": "./data/9.obj",
-    "mtl": "./data/9.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/9.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/9.mtl",
     "size": 13504101,
     "bounds": {
       "min": [
@@ -217,8 +217,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 10",
-    "file": "./data/10.obj",
-    "mtl": "./data/10.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/10.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/10.mtl",
     "size": 12478061,
     "bounds": {
       "min": [
@@ -241,8 +241,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 11",
-    "file": "./data/11.obj",
-    "mtl": "./data/11.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/11.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/11.mtl",
     "size": 25511032,
     "bounds": {
       "min": [
@@ -265,8 +265,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 12",
-    "file": "./data/12.obj",
-    "mtl": "./data/12.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/12.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/12.mtl",
     "size": 18200929,
     "bounds": {
       "min": [
@@ -289,8 +289,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 13",
-    "file": "./data/13.obj",
-    "mtl": "./data/13.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/13.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/13.mtl",
     "size": 15845707,
     "bounds": {
       "min": [
@@ -313,8 +313,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 14",
-    "file": "./data/14.obj",
-    "mtl": "./data/14.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/14.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/14.mtl",
     "size": 16437572,
     "bounds": {
       "min": [
@@ -337,8 +337,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 15",
-    "file": "./data/15.obj",
-    "mtl": "./data/15.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/15.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/15.mtl",
     "size": 24932570,
     "bounds": {
       "min": [
@@ -361,8 +361,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 16",
-    "file": "./data/16.obj",
-    "mtl": "./data/16.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/16.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/16.mtl",
     "size": 12536361,
     "bounds": {
       "min": [
@@ -385,8 +385,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 17",
-    "file": "./data/17.obj",
-    "mtl": "./data/17.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/17.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/17.mtl",
     "size": 19620108,
     "bounds": {
       "min": [
@@ -409,8 +409,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 18",
-    "file": "./data/18.obj",
-    "mtl": "./data/18.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/18.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/18.mtl",
     "size": 8805448,
     "bounds": {
       "min": [
@@ -433,8 +433,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 19",
-    "file": "./data/19.obj",
-    "mtl": "./data/19.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/19.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/19.mtl",
     "size": 15821203,
     "bounds": {
       "min": [
@@ -457,8 +457,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 20",
-    "file": "./data/20.obj",
-    "mtl": "./data/20.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/20.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/20.mtl",
     "size": 12687112,
     "bounds": {
       "min": [
@@ -481,8 +481,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 21",
-    "file": "./data/21.obj",
-    "mtl": "./data/21.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/21.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/21.mtl",
     "size": 16999358,
     "bounds": {
       "min": [
@@ -505,8 +505,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 22",
-    "file": "./data/22.obj",
-    "mtl": "./data/22.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/22.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/22.mtl",
     "size": 20620963,
     "bounds": {
       "min": [
@@ -529,8 +529,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 23",
-    "file": "./data/23.obj",
-    "mtl": "./data/23.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/23.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/23.mtl",
     "size": 16183157,
     "bounds": {
       "min": [
@@ -553,8 +553,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 24",
-    "file": "./data/24.obj",
-    "mtl": "./data/24.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/24.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/24.mtl",
     "size": 22954811,
     "bounds": {
       "min": [
@@ -577,8 +577,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 25",
-    "file": "./data/25.obj",
-    "mtl": "./data/25.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/25.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/25.mtl",
     "size": 10313554,
     "bounds": {
       "min": [
@@ -601,8 +601,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 26",
-    "file": "./data/26.obj",
-    "mtl": "./data/26.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/26.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/26.mtl",
     "size": 17839322,
     "bounds": {
       "min": [
@@ -625,8 +625,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 27",
-    "file": "./data/27.obj",
-    "mtl": "./data/27.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/27.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/27.mtl",
     "size": 15681765,
     "bounds": {
       "min": [
@@ -649,8 +649,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 28",
-    "file": "./data/28.obj",
-    "mtl": "./data/28.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/28.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/28.mtl",
     "size": 22817412,
     "bounds": {
       "min": [
@@ -673,8 +673,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 29",
-    "file": "./data/29.obj",
-    "mtl": "./data/29.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/29.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/29.mtl",
     "size": 10919563,
     "bounds": {
       "min": [
@@ -697,8 +697,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 30",
-    "file": "./data/30.obj",
-    "mtl": "./data/30.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/30.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/30.mtl",
     "size": 11186969,
     "bounds": {
       "min": [
@@ -721,8 +721,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 31",
-    "file": "./data/31.obj",
-    "mtl": "./data/31.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/31.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/31.mtl",
     "size": 24915618,
     "bounds": {
       "min": [
@@ -745,8 +745,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 32",
-    "file": "./data/32.obj",
-    "mtl": "./data/32.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/32.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/32.mtl",
     "size": 9323773,
     "bounds": {
       "min": [
@@ -769,8 +769,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 33",
-    "file": "./data/33.obj",
-    "mtl": "./data/33.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/33.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/33.mtl",
     "size": 14014350,
     "bounds": {
       "min": [
@@ -793,8 +793,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 34",
-    "file": "./data/34.obj",
-    "mtl": "./data/34.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/34.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/34.mtl",
     "size": 55586695,
     "bounds": {
       "min": [
@@ -817,8 +817,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 35",
-    "file": "./data/35.obj",
-    "mtl": "./data/35.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/35.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/35.mtl",
     "size": 10521996,
     "bounds": {
       "min": [
@@ -841,8 +841,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 36",
-    "file": "./data/36.obj",
-    "mtl": "./data/36.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/36.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/36.mtl",
     "size": 6530265,
     "bounds": {
       "min": [
@@ -865,8 +865,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 37",
-    "file": "./data/37.obj",
-    "mtl": "./data/37.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/37.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/37.mtl",
     "size": 42383146,
     "bounds": {
       "min": [
@@ -889,8 +889,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 38",
-    "file": "./data/38.obj",
-    "mtl": "./data/38.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/38.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/38.mtl",
     "size": 7709188,
     "bounds": {
       "min": [
@@ -913,8 +913,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 39",
-    "file": "./data/39.obj",
-    "mtl": "./data/39.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/39.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/39.mtl",
     "size": 76990860,
     "bounds": {
       "min": [
@@ -937,8 +937,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 40",
-    "file": "./data/40.obj",
-    "mtl": "./data/40.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/40.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/40.mtl",
     "size": 9886098,
     "bounds": {
       "min": [
@@ -961,8 +961,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 41",
-    "file": "./data/41.obj",
-    "mtl": "./data/41.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/41.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/41.mtl",
     "size": 6119499,
     "bounds": {
       "min": [
@@ -985,8 +985,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 42",
-    "file": "./data/42.obj",
-    "mtl": "./data/42.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/42.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/42.mtl",
     "size": 10905117,
     "bounds": {
       "min": [
@@ -1009,8 +1009,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 43",
-    "file": "./data/43.obj",
-    "mtl": "./data/43.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/43.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/43.mtl",
     "size": 6319255,
     "bounds": {
       "min": [
@@ -1033,8 +1033,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 44",
-    "file": "./data/44.obj",
-    "mtl": "./data/44.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/44.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/44.mtl",
     "size": 15272704,
     "bounds": {
       "min": [
@@ -1057,8 +1057,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 45",
-    "file": "./data/45.obj",
-    "mtl": "./data/45.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/45.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/45.mtl",
     "size": 10309844,
     "bounds": {
       "min": [
@@ -1081,8 +1081,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 46",
-    "file": "./data/46.obj",
-    "mtl": "./data/46.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/46.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/46.mtl",
     "size": 7425192,
     "bounds": {
       "min": [
@@ -1105,8 +1105,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 47",
-    "file": "./data/47.obj",
-    "mtl": "./data/47.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/47.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/47.mtl",
     "size": 9553617,
     "bounds": {
       "min": [
@@ -1129,8 +1129,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 48",
-    "file": "./data/48.obj",
-    "mtl": "./data/48.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/48.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/48.mtl",
     "size": 17323515,
     "bounds": {
       "min": [
@@ -1153,8 +1153,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 49",
-    "file": "./data/49.obj",
-    "mtl": "./data/49.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/49.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/49.mtl",
     "size": 10933884,
     "bounds": {
       "min": [
@@ -1177,8 +1177,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 50",
-    "file": "./data/50.obj",
-    "mtl": "./data/50.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/50.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/50.mtl",
     "size": 6280080,
     "bounds": {
       "min": [
@@ -1201,8 +1201,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 51",
-    "file": "./data/51.obj",
-    "mtl": "./data/51.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/51.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/51.mtl",
     "size": 16479773,
     "bounds": {
       "min": [
@@ -1225,8 +1225,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 52",
-    "file": "./data/52.obj",
-    "mtl": "./data/52.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/52.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/52.mtl",
     "size": 15139394,
     "bounds": {
       "min": [
@@ -1249,8 +1249,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 53",
-    "file": "./data/53.obj",
-    "mtl": "./data/53.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/53.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/53.mtl",
     "size": 12118102,
     "bounds": {
       "min": [
@@ -1273,8 +1273,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 54",
-    "file": "./data/54.obj",
-    "mtl": "./data/54.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/54.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/54.mtl",
     "size": 11320423,
     "bounds": {
       "min": [
@@ -1297,8 +1297,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 55",
-    "file": "./data/55.obj",
-    "mtl": "./data/55.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/55.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/55.mtl",
     "size": 6271734,
     "bounds": {
       "min": [
@@ -1321,8 +1321,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 56",
-    "file": "./data/56.obj",
-    "mtl": "./data/56.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/56.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/56.mtl",
     "size": 13982338,
     "bounds": {
       "min": [
@@ -1345,8 +1345,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 57",
-    "file": "./data/57.obj",
-    "mtl": "./data/57.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/57.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/57.mtl",
     "size": 6492734,
     "bounds": {
       "min": [
@@ -1369,8 +1369,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 58",
-    "file": "./data/58.obj",
-    "mtl": "./data/58.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/58.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/58.mtl",
     "size": 14202125,
     "bounds": {
       "min": [
@@ -1393,8 +1393,8 @@ window.INSECT_MODELS = [
   },
   {
     "name": "昆虫模型 59",
-    "file": "./data/59.obj",
-    "mtl": "./data/59.mtl",
+    "file": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/59.obj",
+    "mtl": "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/59.mtl",
     "size": 13018863,
     "bounds": {
       "min": [
