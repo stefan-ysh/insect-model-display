@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="昆虫 3D 模型在线展示，支持 data 目录 OBJ 模型切换、旋转、缩放和上色。" />
+    <title>Insect Model Display</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Insect Specimen Viewer</p>
+          <h1>昆虫 3D 模型展台</h1>
+        </div>
+        <div class="status-card" aria-live="polite">
+          <strong id="modelName">正在准备模型...</strong>
+          <small id="modelHint">请选择 data 目录中的模型</small>
+        </div>
+      </header>
+
+      <section class="stage-layout">
+        <aside class="model-panel" aria-label="模型列表">
+          <select class="model-select" id="modelSelect" aria-label="选择模型"></select>
+          <div class="model-list" id="modelList"></div>
+        </aside>
+
+        <section class="viewer-card" aria-label="3D 模型展示区域">
+          <canvas id="sceneCanvas" aria-label="3D 昆虫模型展示画布"></canvas>
+          <div class="hotspot-layer" id="hotspotLayer" aria-hidden="true"></div>
+          <div class="viewer-help">
+            <span>左键旋转 / 滚轮缩放 / 右键平移</span>
+          </div>
+        </section>
+
+        <aside class="control-panel" aria-label="展示控制">
+          <div class="panel-head">
+            <span>Controls</span>
+            <small>展示参数</small>
+          </div>
+
+          <div class="control-scroll">
+            <label class="field">
+              <span>模型颜色</span>
+              <input id="colorPicker" type="color" value="#11100c" />
+            </label>
+
+            <label class="field">
+              <span>背景颜色</span>
+              <input id="bgPicker" type="color" value="#07101c" />
+            </label>
+
+            <label class="field">
+              <span>材质预设</span>
+              <select id="materialSelect" class="control-select" aria-label="材质预设">
+                <option value="specimen">标本</option>
+                <option value="matte">哑光</option>
+                <option value="metal">金属</option>
+                <option value="translucent">半透明</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>缩放 <b id="scaleValue">1.00x</b></span>
+              <input id="scaleRange" type="range" min="0.3" max="3" value="1" step="0.01" />
+            </label>
+
+            <label class="field">
+              <span>粗糙度 <b id="roughnessValue">0.58</b></span>
+              <input id="roughnessRange" type="range" min="0.05" max="1" value="0.58" step="0.01" />
+            </label>
+
+            <label class="field">
+              <span>旋转速度 <b id="speedValue">0.55</b></span>
+              <input id="speedRange" type="range" min="0" max="2" value="0.55" step="0.01" />
+            </label>
+
+            <label class="field">
+              <span>灯光 <b id="lightValue">1.6</b></span>
+              <input id="lightRange" type="range" min="0.3" max="3" value="1.6" step="0.1" />
+            </label>
+
+            <div class="info-block" aria-label="模型尺寸">
+              <span>尺寸</span>
+              <strong id="dimensionText">等待模型加载</strong>
+            </div>
+
+            <div class="clip-block" aria-label="剖切查看">
+              <div class="clip-head">
+                <span>剖切</span>
+                <button id="clipToggle" type="button" aria-pressed="false">剖切：关</button>
+              </div>
+              <select id="clipAxis" class="control-select" aria-label="剖切轴向">
+                <option value="x">X 轴</option>
+                <option value="y">Y 轴</option>
+                <option value="z">Z 轴</option>
+              </select>
+              <label class="field compact-field">
+                <span>位置 <b id="clipValue">0%</b></span>
+                <input id="clipRange" type="range" min="-100" max="100" value="0" step="1" />
+              </label>
+            </div>
+
+            <div class="view-block" aria-label="视角预设">
+              <span>视角</span>
+              <div class="view-grid">
+                <button type="button" data-view="front">正面</button>
+                <button type="button" data-view="side">侧面</button>
+                <button type="button" data-view="top">俯视</button>
+                <button type="button" data-view="iso">等轴</button>
+              </div>
+            </div>
+
+            <div class="button-stack">
+              <button id="resetBtn" type="button">重置视角</button>
+              <button id="fullscreenBtn" type="button">全屏查看</button>
+              <button id="spinBtn" type="button" aria-pressed="true">自动旋转：开</button>
+              <button id="wireBtn" type="button" aria-pressed="false">线框：关</button>
+              <button id="hotspotBtn" type="button" aria-pressed="false">标注：关</button>
+              <button id="tourBtn" type="button" aria-pressed="false">巡展：关</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./vendor/three/three.min.js"></script>
+    <script src="./vendor/three/OrbitControls.js"></script>
+    <script src="./vendor/three/OBJLoader.js"></script>
+    <script src="./data/models.js"></script>
+    <script src="./data/hotspots.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
