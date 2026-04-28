@@ -1,5 +1,5 @@
 {
-  "./data/1.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/1.obj": [
     {
       "label": "头部",
       "position": [
@@ -64,7 +64,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/2.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/2.obj": [
     {
       "label": "头部",
       "position": [
@@ -129,7 +129,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/3.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/3.obj": [
     {
       "label": "头部",
       "position": [
@@ -194,7 +194,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/4.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/4.obj": [
     {
       "label": "头部",
       "position": [
@@ -259,7 +259,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/5.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/5.obj": [
     {
       "label": "头部",
       "position": [
@@ -324,7 +324,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/6.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/6.obj": [
     {
       "label": "头部",
       "position": [
@@ -389,7 +389,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/7.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/7.obj": [
     {
       "label": "头部",
       "position": [
@@ -454,7 +454,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/8.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/8.obj": [
     {
       "label": "头部",
       "position": [
@@ -519,7 +519,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/9.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/9.obj": [
     {
       "label": "头部",
       "position": [
@@ -584,7 +584,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/10.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/10.obj": [
     {
       "label": "头部",
       "position": [
@@ -649,7 +649,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/11.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/11.obj": [
     {
       "label": "头部",
       "position": [
@@ -714,7 +714,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/12.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/12.obj": [
     {
       "label": "头部",
       "position": [
@@ -779,7 +779,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/13.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/13.obj": [
     {
       "label": "头部",
       "position": [
@@ -844,7 +844,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/14.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/14.obj": [
     {
       "label": "头部",
       "position": [
@@ -909,7 +909,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/15.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/15.obj": [
     {
       "label": "头部",
       "position": [
@@ -974,7 +974,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/16.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/16.obj": [
     {
       "label": "头部",
       "position": [
@@ -1039,7 +1039,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/17.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/17.obj": [
     {
       "label": "头部",
       "position": [
@@ -1104,7 +1104,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/18.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/18.obj": [
     {
       "label": "头部",
       "position": [
@@ -1169,7 +1169,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/19.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/19.obj": [
     {
       "label": "头部",
       "position": [
@@ -1234,7 +1234,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/20.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/20.obj": [
     {
       "label": "头部",
       "position": [
@@ -1299,7 +1299,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/21.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/21.obj": [
     {
       "label": "头部",
       "position": [
@@ -1364,7 +1364,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/22.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/22.obj": [
     {
       "label": "头部",
       "position": [
@@ -1429,7 +1429,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/23.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/23.obj": [
     {
       "label": "头部",
       "position": [
@@ -1494,7 +1494,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/24.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/24.obj": [
     {
       "label": "头部",
       "position": [
@@ -1559,7 +1559,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/25.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/25.obj": [
     {
       "label": "头部",
       "position": [
@@ -1624,7 +1624,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/26.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/26.obj": [
     {
       "label": "头部",
       "position": [
@@ -1689,7 +1689,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/27.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/27.obj": [
     {
       "label": "头部",
       "position": [
@@ -1754,7 +1754,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/28.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/28.obj": [
     {
       "label": "头部",
       "position": [
@@ -1819,7 +1819,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/29.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/29.obj": [
     {
       "label": "头部",
       "position": [
@@ -1884,7 +1884,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/30.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/30.obj": [
     {
       "label": "头部",
       "position": [
@@ -1949,7 +1949,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/31.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/31.obj": [
     {
       "label": "头部",
       "position": [
@@ -2014,7 +2014,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/32.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/32.obj": [
     {
       "label": "头部",
       "position": [
@@ -2079,7 +2079,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/33.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/33.obj": [
     {
       "label": "头部",
       "position": [
@@ -2144,7 +2144,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/34.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/34.obj": [
     {
       "label": "头部",
       "position": [
@@ -2209,7 +2209,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/35.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/35.obj": [
     {
       "label": "头部",
       "position": [
@@ -2274,7 +2274,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/36.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/36.obj": [
     {
       "label": "头部",
       "position": [
@@ -2339,7 +2339,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/37.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/37.obj": [
     {
       "label": "头部",
       "position": [
@@ -2404,7 +2404,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/38.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/38.obj": [
     {
       "label": "头部",
       "position": [
@@ -2469,7 +2469,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/39.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/39.obj": [
     {
       "label": "头部",
       "position": [
@@ -2534,7 +2534,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/40.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/40.obj": [
     {
       "label": "头部",
       "position": [
@@ -2599,7 +2599,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/41.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/41.obj": [
     {
       "label": "头部",
       "position": [
@@ -2664,7 +2664,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/42.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/42.obj": [
     {
       "label": "头部",
       "position": [
@@ -2729,7 +2729,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/43.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/43.obj": [
     {
       "label": "头部",
       "position": [
@@ -2794,7 +2794,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/44.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/44.obj": [
     {
       "label": "头部",
       "position": [
@@ -2859,7 +2859,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/45.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/45.obj": [
     {
       "label": "头部",
       "position": [
@@ -2924,7 +2924,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/46.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/46.obj": [
     {
       "label": "头部",
       "position": [
@@ -2989,7 +2989,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/47.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/47.obj": [
     {
       "label": "头部",
       "position": [
@@ -3054,7 +3054,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/48.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/48.obj": [
     {
       "label": "头部",
       "position": [
@@ -3119,7 +3119,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/49.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/49.obj": [
     {
       "label": "头部",
       "position": [
@@ -3184,7 +3184,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/50.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/50.obj": [
     {
       "label": "头部",
       "position": [
@@ -3249,7 +3249,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/51.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/51.obj": [
     {
       "label": "头部",
       "position": [
@@ -3314,7 +3314,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/52.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/52.obj": [
     {
       "label": "头部",
       "position": [
@@ -3379,7 +3379,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/53.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/53.obj": [
     {
       "label": "头部",
       "position": [
@@ -3444,7 +3444,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/54.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/54.obj": [
     {
       "label": "头部",
       "position": [
@@ -3509,7 +3509,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/55.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/55.obj": [
     {
       "label": "头部",
       "position": [
@@ -3574,7 +3574,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/56.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/56.obj": [
     {
       "label": "头部",
       "position": [
@@ -3639,7 +3639,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/57.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/57.obj": [
     {
       "label": "头部",
       "position": [
@@ -3704,7 +3704,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/58.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/58.obj": [
     {
       "label": "头部",
       "position": [
@@ -3769,7 +3769,7 @@
       "note": "右侧足部外缘"
     }
   ],
-  "./data/59.obj": [
+  "https://insect-models-1258340288.cos.ap-nanjing.myqcloud.com/data/59.obj": [
     {
       "label": "头部",
       "position": [
