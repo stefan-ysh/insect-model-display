@@ -61,6 +61,10 @@ renderer.toneMappingExposure = 1.18;
 renderer.localClippingEnabled = true;
 renderer.setClearColor(stageColor, 1);
 
+// 启用阴影渲染
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.autoRotate = true;
@@ -71,9 +75,33 @@ controls.target.set(0, -0.1, 0);
 
 const keyLight = new THREE.DirectionalLight(0xffe3b1, Number(lightRange.value));
 keyLight.position.set(4, 6, 3);
+// 配置阴影投射
+keyLight.castShadow = true;
+keyLight.shadow.mapSize.width = 1024;
+keyLight.shadow.mapSize.height = 1024;
+keyLight.shadow.camera.near = 0.1;
+keyLight.shadow.camera.far = 30;
+keyLight.shadow.camera.left = -6;
+keyLight.shadow.camera.right = 6;
+keyLight.shadow.camera.top = 6;
+keyLight.shadow.camera.bottom = -6;
+keyLight.shadow.bias = -0.002;
+keyLight.shadow.radius = 4;
 scene.add(keyLight);
 scene.add(new THREE.HemisphereLight(0xdcecff, 0x2b1a10, 2.4));
 scene.add(new THREE.AmbientLight(0xffffff, 0.65));
+
+// 创建地面平面接收阴影
+const groundGeometry = new THREE.PlaneGeometry(20, 20);
+const groundMaterial = new THREE.ShadowMaterial({
+  opacity: 0.35,
+  color: 0x000000
+});
+const groundPlane = new THREE.Mesh(groundGeometry, groundMaterial);
+groundPlane.rotation.x = -Math.PI / 2;
+groundPlane.position.y = -1.5;
+groundPlane.receiveShadow = true;
+scene.add(groundPlane);
 
 const clipPlane = new THREE.Plane(new THREE.Vector3(1, 0, 0), 0);
 const clock = new THREE.Clock();
@@ -92,6 +120,8 @@ let currentDimensions = null;
 let tourTimer = null;
 let tourStep = 0;
 let isLoading = false;
+let shadowEnabled = true;
+const shadowToggle = document.querySelector('#shadowToggle');
 scene.add(specimen);
 
 renderModelList();
@@ -229,6 +259,9 @@ function applyMaterialState() {
       if (!child.geometry.attributes.normal) child.geometry.computeVertexNormals();
     }
     child.frustumCulled = false;
+    // 启用阴影投射
+    child.castShadow = shadowEnabled;
+    child.receiveShadow = shadowEnabled;
     disposeMaterial(child.material);
     child.material = new THREE.MeshStandardMaterial({
       color,
@@ -243,7 +276,17 @@ function applyMaterialState() {
       clippingPlanes: clippingEnabled ? [clipPlane] : []
     });
   });
+  // 更新地面阴影平面的位置
+  updateGroundPlanePosition();
 }
+
+function updateGroundPlanePosition() {
+  if (!currentFrame) return;
+  const box = new THREE.Box3().setFromObject(specimen);
+  groundPlane.position.y = box.min.y - 0.05;
+  groundPlane.visible = shadowEnabled;
+}
+
 
 function updateScale() {
   const scale = Math.max(Number(scaleRange.value), MIN_SCALE);
@@ -513,6 +556,15 @@ hotspotBtn.addEventListener('click', () => {
 });
 tourBtn.addEventListener('click', toggleTour);
 
+// 阴影开关
+shadowToggle.addEventListener('click', () => {
+  shadowEnabled = !shadowEnabled;
+  setToggle(shadowToggle, shadowEnabled, '阴影');
+  applyMaterialState();
+});
+
+
+
 const resizeObserver = new ResizeObserver(resizeRenderer);
 resizeObserver.observe(canvas.parentElement);
 
@@ -522,6 +574,7 @@ function animate() {
   const elapsed = clock.getElapsedTime();
   controls.update();
   specimen.position.y = specimenBaseY + Math.sin(elapsed * 1.5) * 0.035;
+
   updateHotspots();
   renderer.render(scene, camera);
   requestAnimationFrame(animate);

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="昆虫 3D 模型在线展示，支持 data 目录 OBJ 模型切换、旋转、缩放和上色。" />
+    <meta
+      name="description"
+      content="昆虫 3D 模型在线展示，支持 data 目录 OBJ 模型切换、旋转、缩放和上色。"
+    />
     <title>Insect Model Display</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -12,7 +15,7 @@
       <header class="topbar">
         <div>
           <p class="eyebrow">Insect Specimen Viewer</p>
-          <h1>昆虫 3D 模型展台</h1>
+          <h2>昆虫 3D 模型展台</h2>
         </div>
         <div class="status-card" aria-live="polite">
           <strong id="modelName">正在准备模型...</strong>
@@ -22,7 +25,11 @@
 
       <section class="stage-layout">
         <aside class="model-panel" aria-label="模型列表">
-          <select class="model-select" id="modelSelect" aria-label="选择模型"></select>
+          <select
+            class="model-select"
+            id="modelSelect"
+            aria-label="选择模型"
+          ></select>
           <div class="model-list" id="modelList"></div>
         </aside>
 
@@ -58,12 +65,16 @@
 
             <label class="field">
               <span>背景颜色</span>
-              <input id="bgPicker" type="color" value="#07101c" />
+              <input id="bgPicker" type="color" value="#8782ce" />
             </label>
 
             <label class="field">
               <span>材质预设</span>
-              <select id="materialSelect" class="control-select" aria-label="材质预设">
+              <select
+                id="materialSelect"
+                class="control-select"
+                aria-label="材质预设"
+              >
                 <option value="specimen">标本</option>
                 <option value="matte">哑光</option>
                 <option value="metal">金属</option>
@@ -73,22 +84,50 @@
 
             <label class="field">
               <span>缩放 <b id="scaleValue">1.00x</b></span>
-              <input id="scaleRange" type="range" min="0.65" max="3" value="1" step="0.01" />
+              <input
+                id="scaleRange"
+                type="range"
+                min="0.65"
+                max="3"
+                value="1"
+                step="0.01"
+              />
             </label>
 
             <label class="field">
               <span>粗糙度 <b id="roughnessValue">0.58</b></span>
-              <input id="roughnessRange" type="range" min="0.05" max="1" value="0.58" step="0.01" />
+              <input
+                id="roughnessRange"
+                type="range"
+                min="0.05"
+                max="1"
+                value="0.58"
+                step="0.01"
+              />
             </label>
 
             <label class="field">
               <span>旋转速度 <b id="speedValue">0.55</b></span>
-              <input id="speedRange" type="range" min="0" max="2" value="0.55" step="0.01" />
+              <input
+                id="speedRange"
+                type="range"
+                min="0"
+                max="2"
+                value="0.55"
+                step="0.01"
+              />
             </label>
 
             <label class="field">
               <span>灯光 <b id="lightValue">1.6</b></span>
-              <input id="lightRange" type="range" min="0.3" max="10" value="1.6" step="0.1" />
+              <input
+                id="lightRange"
+                type="range"
+                min="0.3"
+                max="10"
+                value="1.6"
+                step="0.1"
+              />
             </label>
 
             <div class="info-block" aria-label="模型尺寸">
@@ -99,16 +138,29 @@
             <div class="clip-block" aria-label="剖切查看">
               <div class="clip-head">
                 <span>剖切</span>
-                <button id="clipToggle" type="button" aria-pressed="false">剖切：关</button>
+                <button id="clipToggle" type="button" aria-pressed="false">
+                  剖切：关
+                </button>
               </div>
-              <select id="clipAxis" class="control-select" aria-label="剖切轴向">
+              <select
+                id="clipAxis"
+                class="control-select"
+                aria-label="剖切轴向"
+              >
                 <option value="x">X 轴</option>
                 <option value="y">Y 轴</option>
                 <option value="z">Z 轴</option>
               </select>
               <label class="field compact-field">
                 <span>位置 <b id="clipValue">0%</b></span>
-                <input id="clipRange" type="range" min="-100" max="100" value="0" step="1" />
+                <input
+                  id="clipRange"
+                  type="range"
+                  min="-100"
+                  max="100"
+                  value="0"
+                  step="1"
+                />
               </label>
             </div>
 
@@ -125,10 +177,21 @@
             <div class="button-stack">
               <button id="resetBtn" type="button">重置视角</button>
               <button id="fullscreenBtn" type="button">全屏查看</button>
-              <button id="spinBtn" type="button" aria-pressed="true">自动旋转：开</button>
-              <button id="wireBtn" type="button" aria-pressed="false">线框：关</button>
-              <button id="hotspotBtn" type="button" aria-pressed="false">标注：关</button>
-              <button id="tourBtn" type="button" aria-pressed="false">巡展：关</button>
+              <button id="spinBtn" type="button" aria-pressed="true">
+                自动旋转：开
+              </button>
+              <button id="wireBtn" type="button" aria-pressed="false">
+                线框：关
+              </button>
+              <button id="shadowToggle" type="button" aria-pressed="true">
+                阴影：开
+              </button>
+              <button id="hotspotBtn" type="button" aria-pressed="false">
+                标注：关
+              </button>
+              <button id="tourBtn" type="button" aria-pressed="false">
+                巡展：关
+              </button>
             </div>
           </div>
         </aside>
