@@ -193,14 +193,15 @@ function replaceSpecimen(object, label, hint) {
   specimen = object;
   scene.add(specimen);
   modelName.textContent = label;
-  fitObjectToView(specimen);
+  // 切换模型时保持当前摄像机角度
+  fitObjectToView(specimen, true);
   applyMaterialState();
   updateClipPlane();
   renderHotspots();
   setHint(hint || '模型已加载');
 }
 
-function fitObjectToView(object) {
+function fitObjectToView(object, preserveAngle = false) {
   object.position.set(0, specimenBaseY, 0);
   object.rotation.set(0, 0, 0);
   object.scale.setScalar(1);
@@ -220,7 +221,38 @@ function fitObjectToView(object) {
   updateScale();
 
   currentFrame = { radius: radius * baseScale, targetY: specimenBaseY };
-  frameCamera();
+
+  if (preserveAngle) {
+    // 保持当前摄像机角度，仅调整距离适配新模型
+    frameCameraKeepAngle();
+  } else {
+    frameCamera();
+  }
+}
+
+/**
+ * 保持当前摄像机方向，仅根据新模型尺寸调整距离和裁剪面
+ */
+function frameCameraKeepAngle() {
+  if (!currentFrame) return;
+  const verticalFov = THREE.MathUtils.degToRad(camera.fov);
+  const horizontalFov = 2 * Math.atan(Math.tan(verticalFov / 2) * camera.aspect);
+  const usefulFov = Math.max(Math.min(verticalFov, horizontalFov), 0.42);
+  const distance = Math.max((currentFrame.radius * 1.28) / Math.sin(usefulFov / 2), 3.2);
+
+  // 获取当前摄像机方向（保持角度不变）
+  const currentDirection = new THREE.Vector3()
+    .subVectors(camera.position, controls.target)
+    .normalize();
+
+  controls.target.set(0, currentFrame.targetY, 0);
+  camera.position.copy(controls.target).add(currentDirection.multiplyScalar(distance));
+  camera.near = Math.max(distance / 120, 0.01);
+  camera.far = Math.max(distance * 120, 1000);
+  camera.updateProjectionMatrix();
+  controls.minDistance = Math.max(distance * 0.22, 0.4);
+  controls.maxDistance = distance * 3.2;
+  controls.update();
 }
 
 function frameCamera(view = currentView) {
