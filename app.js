@@ -186,7 +186,7 @@ function autoLoadFirstModel() {
     loadCatalogModel(models[0]);
     return;
   }
-  setHint('没有找到 data 模型，请先运行 node scripts/scan-models.js 生成清单');
+  setHint('没有找到在线模型清单，请检查 data/models.js');
 }
 
 function loadCatalogModel(model) {
@@ -195,7 +195,7 @@ function loadCatalogModel(model) {
   setHint(`正在加载 ${model.name}...`);
   setLoadingState(true, model.name, 0, `正在读取 ${formatBytes(model.size) || '模型文件'}`);
   setActiveModel(model.file);
-  activeHotspots = window.INSECT_HOTSPOTS?.[model.file] || [];
+  activeHotspots = getHotspotsForModel(model.file);
 
   new THREE.OBJLoader().load(
     model.file,
@@ -216,7 +216,7 @@ function loadCatalogModel(model) {
     },
     (error) => {
       console.error(error);
-      setHint('当前浏览器阻止读取 data 模型。请部署到静态站点后访问，或使用本地静态服务预览。');
+      setHint('模型加载失败，请检查在线模型地址和跨域访问配置。');
       isLoading = false;
       setLoadingState(false);
     }
@@ -411,7 +411,7 @@ function updateClipPlane() {
 function renderModelList() {
   const models = window.INSECT_MODELS || [];
   if (!models.length) {
-    modelList.innerHTML = '<p class="empty-models">没有扫描到 data/*.obj</p>';
+    modelList.innerHTML = '<p class="empty-models">没有可用的在线模型</p>';
     modelSelect.innerHTML = '<option>没有可用模型</option>';
     modelSelect.disabled = true;
     return;
@@ -454,6 +454,20 @@ function renderHotspots() {
   hotspotLayer.innerHTML = hotspots.map((hotspot, index) => `
     <button class="hotspot" type="button" data-index="${index}" title="${hotspot.note || hotspot.label}">${hotspot.label}</button>
   `).join('');
+}
+
+function getHotspotsForModel(file) {
+  const hotspots = window.INSECT_HOTSPOTS || {};
+  if (hotspots[file]) return hotspots[file];
+
+  const matchedKey = Object.keys(hotspots).find((key) => {
+    try {
+      return new URL(key, window.location.href).pathname === new URL(file, window.location.href).pathname;
+    } catch {
+      return key === file;
+    }
+  });
+  return matchedKey ? hotspots[matchedKey] : [];
 }
 
 function updateHotspots() {

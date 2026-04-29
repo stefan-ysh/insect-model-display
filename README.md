@@ -1,17 +1,17 @@
 # Insect Model Display
 
-一个用于展示 `data/` 目录昆虫 OBJ 模型的轻量网页项目。页面只支持内置模型列表，不支持拖拽导入、不支持用户手动加载外部模型，适合快速部署为静态展示页。
+一个用于展示在线昆虫 OBJ 模型的轻量网页项目。页面只支持内置在线模型列表，不支持拖拽导入、不支持用户手动加载外部模型，适合快速部署为静态展示页。
 
 ## 技术栈
 
 - 原生 HTML / CSS / JavaScript
 - Three.js 本地文件，位于 `vendor/three/`
 - 无后端、无构建步骤
-- 模型来源固定为根目录 `data/`
+- 模型来源固定为 `data/models.js` 中配置的在线 URL
 
 ## 已支持的 3D 操作
 
-- data 模型列表切换
+- 在线模型列表切换
 - 移动端模型下拉选择
 - 鼠标/触控旋转、缩放、平移
 - 自动旋转开关与速度调节
@@ -30,28 +30,28 @@
 - 重置视角
 - 全屏查看
 
-## 模型目录
+## 在线模型清单
 
-当前模型放在根目录的 `data/` 下。
+当前模型地址维护在根目录的 `data/` 配置文件中，模型文件本身由在线对象存储提供。
 
-- `data/models.json` 是模型清单
+- `data/models.json` 是模型清单的 JSON 版本
 - `data/models.js` 用于页面直接渲染模型列表
-- 新增或删除 OBJ 后，重新运行清单生成脚本
+- `data/hotspots.json` 是热点标注数据的 JSON 版本
+- `data/hotspots.js` 用于页面直接渲染热点标注
+- 新增、删除或替换在线模型时，手动同步更新以上清单文件
 
-```bash
-node scripts/scan-models.js
-```
+本项目已不再使用本地 OBJ 扫描脚本，避免重新生成清单时把在线 URL 覆盖成本地相对路径。
 
 ## 本地与上线
 
-页面不再依赖 CDN，Three.js 已放在本地 `vendor/three/`。模型读取仍需要浏览器允许静态资源请求。部署到 GitHub Pages、Netlify、Vercel、Cloudflare Pages 后可以直接使用。
+页面不再依赖 CDN，Three.js 已放在本地 `vendor/three/`。在线模型读取需要对象存储开启允许当前站点访问的 CORS 配置。部署到 GitHub Pages、Netlify、Vercel、Cloudflare Pages 后可以直接使用。
 
-如果直接双击 `index.html`，部分浏览器会阻止读取本地 `data/*.obj`。这种限制来自浏览器安全策略，不是代码问题。最终上线为静态网页即可正常加载。
+如果直接双击 `index.html`，在线 OBJ 是否能加载取决于对象存储的跨域策略。最终上线为静态网页后，请确保模型域名允许站点源访问。
 
 ## 后续可继续增强
 
-- 每个模型独立热点数据，已生成 `data/hotspots.json` 和 `data/hotspots.js`
-- 如需手动微调热点，编辑 `data/hotspots.json` 中对应模型的 `position: [x, y, z]`，再同步更新 `data/hotspots.js`，或重新运行 `node scripts/scan-models.js` 生成基础位置
+- 每个模型独立热点数据，已维护在 `data/hotspots.json` 和 `data/hotspots.js`
+- 如需手动微调热点，编辑 `data/hotspots.json` 中对应模型的 `position: [x, y, z]`，再同步更新 `data/hotspots.js`
 - 精确测距工具，点击模型两点显示距离
 - 高清截图导出
 - 多模型同屏对比
