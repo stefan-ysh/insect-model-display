@@ -66,8 +66,9 @@ button[aria-pressed="true"],
   height: 100vh;
   height: 100dvh;
   margin: 0 auto;
-  padding: clamp(10px, 1.8dvh, 24px) 0;
+  padding: 0 10px;
   overflow: hidden;
+  width: 100%;
 }
 
 .topbar {
