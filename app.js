@@ -122,6 +122,42 @@ let tourStep = 0;
 let isLoading = false;
 let shadowEnabled = true;
 const shadowToggle = document.querySelector('#shadowToggle');
+
+// 过渡动画
+const TRANSITION_MS = 650;
+let transition = null;
+
+function easeInOutCubic(t) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+/** 设置模型组内所有网格的不透明度 */
+function setGroupOpacity(group, opacity) {
+  group.traverse((child) => {
+    if (!child.isMesh || !child.material) return;
+    child.material.transparent = true;
+    child.material.opacity = opacity;
+  });
+}
+
+/** 立即完成正在进行的过渡 */
+function finishTransition() {
+  if (!transition) return;
+  const { oldGroup, newGroup, newTargetScale } = transition;
+  scene.remove(oldGroup);
+  disposeObject(oldGroup);
+  newGroup.scale.setScalar(newTargetScale);
+  setGroupOpacity(newGroup, 1);
+  // 恢复材质预设的原始不透明度
+  const preset = MATERIAL_PRESETS[materialSelect.value] || MATERIAL_PRESETS.specimen;
+  newGroup.traverse((child) => {
+    if (!child.isMesh || !child.material) return;
+    child.material.opacity = preset.opacity;
+    child.material.transparent = preset.opacity < 1;
+  });
+  transition = null;
+}
+
 scene.add(specimen);
 
 renderModelList();
@@ -188,17 +224,41 @@ function loadCatalogModel(model) {
 }
 
 function replaceSpecimen(object, label, hint) {
-  scene.remove(specimen);
-  disposeObject(specimen);
-  specimen = object;
-  scene.add(specimen);
+  // 若有进行中的过渡，立即完成
+  if (transition) {
+    finishTransition();
+  }
+
+  const oldGroup = specimen;
+  const newGroup = object;
+
+  // 将新模型设为当前对象
+  specimen = newGroup;
+  scene.add(newGroup);
   modelName.textContent = label;
-  // 切换模型时保持当前摄像机角度
-  fitObjectToView(specimen, true);
+
+  // 计算新模型的适配参数（保持摄像机角度）
+  fitObjectToView(newGroup, true);
+  const newTargetScale = newGroup.scale.x;
+
+  // 为新模型应用材质
   applyMaterialState();
   updateClipPlane();
   renderHotspots();
   setHint(hint || '模型已加载');
+
+  // 初始化新模型：缩小 + 透明
+  newGroup.scale.setScalar(newTargetScale * 0.75);
+  setGroupOpacity(newGroup, 0);
+
+  // 启动交叉溶解过渡
+  transition = {
+    startTime: performance.now(),
+    oldGroup,
+    newGroup,
+    oldStartScale: oldGroup.scale.x,
+    newTargetScale
+  };
 }
 
 function fitObjectToView(object, preserveAngle = false) {
@@ -605,7 +665,32 @@ document.addEventListener('fullscreenchange', resizeRenderer);
 function animate() {
   const elapsed = clock.getElapsedTime();
   controls.update();
-  specimen.position.y = specimenBaseY + Math.sin(elapsed * 1.5) * 0.035;
+
+  // 过渡动画 tick
+  if (transition) {
+    const progress = Math.min(
+      (performance.now() - transition.startTime) / TRANSITION_MS,
+      1
+    );
+    const ease = easeInOutCubic(progress);
+    const { oldGroup, newGroup, oldStartScale, newTargetScale } = transition;
+
+    // 旧模型：缩小 + 淡出
+    oldGroup.scale.setScalar(oldStartScale * (1 - ease * 0.25));
+    setGroupOpacity(oldGroup, 1 - ease);
+    oldGroup.position.y = specimenBaseY + Math.sin(elapsed * 1.5) * 0.035;
+
+    // 新模型：放大 + 淡入
+    newGroup.scale.setScalar(newTargetScale * (0.75 + ease * 0.25));
+    setGroupOpacity(newGroup, ease);
+    newGroup.position.y = specimenBaseY + Math.sin(elapsed * 1.5) * 0.035;
+
+    if (progress >= 1) {
+      finishTransition();
+    }
+  } else {
+    specimen.position.y = specimenBaseY + Math.sin(elapsed * 1.5) * 0.035;
+  }
 
   updateHotspots();
   renderer.render(scene, camera);
